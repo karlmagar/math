@@ -158,8 +158,6 @@ p {
     font-size: 2rem;
 
 }
-@media screen and (max: 480px) {
-    #rounds {
-        height: 5%;
-    }
+@media screen and (max: 600px) {
+    main {height: 100vh; width: 100vw}
 }
