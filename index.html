@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Welcome</title>
+    
+</head>
+<body>
+    <main>
+        <h1>Let's play a fun Multiplication Game</h1>
+        <div id="rounds">
+            <button class="ye" onclick="window.location.href = 'home.html'">1X2 digits</button>
+            <button class="ye" onclick="window.location.href = 'home2.html'">2X2 digits</button>
+        </div>
+    </main>
+
+    <script>
+        let rounds = [];
+        for (let i = 0; i < 10; i++) {
+            // creating the rounds
+            rounds.push(
+                {
+                    id: i,
+                    success: null,
+                    n_1: Math.floor(Math.random() * 89) + 10,
+                    n_2: Math.floor(Math.random() * 8) + 2,
+                }
+            );
+        }
+        window.localStorage.setItem("rounds", JSON.stringify(rounds))
+        let rounds2 = [];
+        for (let i = 0; i < 10; i++) {
+            // creating the rounds
+            rounds2.push(
+                {
+                    id: i,
+                    success: null,
+                    n_1: Math.floor(Math.random() * 89) + 10,
+                    n_2: Math.floor(Math.random() * 89) + 10,
+                }
+            );
+        }
+        window.localStorage.setItem("rounds2", JSON.stringify(rounds2))
+        </script>
+</body>
+</html>
